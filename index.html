@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="fav.png" type="image/x-icon" />
+    <title >Segmentify XML Feeder v0.1</title>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+        <img style="margin-left: 39%; " src="logo.png" alt="logo">
+        <form name="form1" id="xml" action="javascript:null" autocomplete="off">
+		<div class="container main">
+	<table id="myTable"  >
+<td>
+		<h2>Entegrasyon</h2>
+	<script>
+                     
+					var entgrator = ["product_id", "title", "category","id", "price", "oldprice", "inStock", "img", "url", "brand"];		
+					for (var i = 0; i <= 9; i++) {
+                        
+                        document.write('<input name = '+i+' placeholder='+entgrator[i]+' required>');
+                        
+                        }	                         
+	</script>
+</td>
+<td>
+	<h2>XML</h2>
+		<script>
+						var xml_ = ["xml_product_id", "xml_title", "xml_category","xml_id", "xml_price", "xml_oldprice", "xml_inStock", "xml_img", "xml_url", "xml_brand"];
+						
+						for (var j = 0; j <= 9; j++) {
+							document.write('<input name = '+j+' placeholder='+xml_[j]+' required >');	
+		}
+		
+		</script>
+	</td>
+	<td>
+		<h2>Description</h2>
+			<script>
+							var desc = ["", "", "","", "", "", "", "", "", ""];
+							for (var k = 0; k <=9 ; k++) {
+								document.write('<input name = '+k+' > ');
+								
+			}</script>
+		
+		</td>
+        
+	</table>
+
+   <th scope="col"  ><button type="button" onclick="addField()"  id="add_params" >+</button> </th>
+   <th scope="col"  ><button type="button"  onClick="window.location.reload();"  id="add_params" >↻</button> </th>
+
+</form>
+<table>
+		<h4>Information</h3>
+		<td>
+			<input name="i_name" type="text" placeholder="Issue Name">
+			<br><input name="i_apikey"  type="text" placeholder="API-KEY">
+		</td>
+		<td>
+				<input name="i_a_id"  type="text" placeholder="Account ID">
+				<input name="i_server"  type="text" placeholder="Server">
+		</td>
+		<td>
+			<input name="i_aName" type="text" placeholder="Account Name">
+			<input name="i_xml_check "  type="checkbox" name="xml" id="xml_use">
+			<small>XML Kullanılıyor mu ?</small>
+		</td>			
+</table>
+
+<br><button name="submit" onclick="saveValues(); return false" type="submit" id="export" data-submit="...Sending">Export / Post</button>
+
+
+    <textarea name="textarea1" rows="5" cols="40"></textarea>
+
+
+
+
+
+
+   
+
+</body>
+<h5 >Created by Yavuz INCEDAL & Ömür Furkan ULU. All Rights Reserved.</h5>
+<a href='https://i.gifer.com/4h.gif'>for more please click...</a>
+</html>
+
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+
+table{
+
+
+width: auto;
+
+}
+
+td{
+	width: 10px;
+}
+th{
+	margin-left: 90px;
+}
+h2{
+    background-color: white;
+    padding: 30px 35px;
+    margin: -10px -50px;
+    text-align:center;
+    border-radius: 10px 10px 0 0;
+	font-size: 18px;
+}
+	
+
+h4{
+background-color: white;
+padding: 30px 35px;
+margin: -10px -50px;
+text-align:center;
+border-radius: 10px 10px 0 0;
+font-size: 18px;
+font-family: 'Raleway', sans-serif;
+
+
+}
+
+div.container{
+width: 50%;
+height: auto;
+margin:5px auto;
+text-align: center;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+font-family: 'Raleway', sans-serif;
+
+
+
+
+}
+div.main{
+width: auto;
+padding: 10px 50px 20px;
+border: 2px solid gray;
+border-radius: 10px;
+font-family: raleway;
+float:left;
+margin-top: 38px;
+margin-right: 50%;
+
+}
+
+
+button {
+cursor: pointer;
+width: auto;
+border: none;
+background: #D73310;
+color: #FFF;
+margin: 0 0 5px;
+padding: 10px;
+font-size: 15px;
+border-radius: 10px;
+outline: 0;
+}
+#export{
+
+    cursor: pointer;
+    width: 50%;
+
+    border: none;
+    background: #D73310;
+    color: #FFF;
+    margin: 0 70px 5px;
+    font-size: 15px;
+    position:relative;
+    border-radius: 10px;
+    margin-right: 10%;
+    outline: 0;
+
+}
+  #reset{
+    cursor: pointer;
+    width: 95px;
+    border: none;
+    background: #D73310;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    outline: 0;
+
+  }
+
+  #add_params{
+    background: #D73310;
+    
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 0px 0px;
+  border-radius: 50%
+
+ 
+
+  }
+	
+</style>
